@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering CSS Positioning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+    <h1>Pozycjonowanie Elementów w CSS</h1>
+    <p>Zrozum <code>position</code> i przejmij kontrolę nad układem strony.</p>
+</header>
+<nav>
+    <a href="#static">Static</a>
+    <a href="#relative">Relative</a>
+    <a href="#absolute">Absolute</a>
+    <a href="#fixed">Fixed</a>
+    <a href="#sticky">Sticky</a>
+</nav>
+
+<section id="static">
+    <h2>1. Position: Static</h2>
+    <p>To ustawienie domyślne. Element znajduje się w normalnym przepływie dokumentu. Właściwości <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> nie działają.</p>
+    <div class="demo-box">
+        <div class="element">Jestem static (domyślny)</div>
+    </div>
+</section>
+
+<section id="relative">
+    <h2>2. Position: Relative</h2>
+    <p>Element jest pozycjonowany względem swojego <strong>pierwotnego położenia</strong>. Przesunięcie go nie wpływa na pozycję sąsiednich elementów – zostawia po sobie "puste miejsce".</p>
+    <div class="demo-box">
+        <div class="element rel-box">Przesunięty o 20px w dół i w prawo</div>
+    </div>
+</section>
+
+<section id="absolute">
+    <h2>3. Position: Absolute</h2>
+    <p>Element zostaje usunięty z normalnego przepływu i pozycjonowany względem <strong>najbliższego przodka</strong>, który ma ustawioną pozycję inną niż <code>static</code>.</p>
+    <div class="demo-box">
+        <div class="element abs-box">Jestem w prawym dolnym rogu ramki</div>
+    </div>
+</section>
+
+<section id="fixed">
+    <h2>4. Position: Fixed</h2>
+    <p>Element jest pozycjonowany względem <strong>okna przeglądarki (viewportu)</strong>. Pozostaje w tym samym miejscu nawet podczas przewijania strony.</p>
+    <p>Spójrz w prawy dolny róg ekranu – widzisz pomarańczowe kółko?</p>
+    <div class="element fix-box">FIXED</div>
+</section>
+
+<section id="sticky">
+    <h2>5. Position: Sticky</h2>
+    <p>Hybryda <code>relative</code> i <code>fixed</code>. Element zachowuje się jak <code>relative</code>, dopóki nie osiągnie określonego punktu (np. góry ekranu), wtedy "przykleja się" jak <code>fixed</code>.</p>
+    <blockquote>Nasz pasek nawigacji na górze strony używa właśnie <code>position: sticky;</code></blockquote>
+</section>
+
+<footer>
+    <p>&copy; 2026 - Przewodnik po CSS Positioning</p>
+</footer>
+
+</body>
+</html>
